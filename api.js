@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const port = process.env.DATABASE_URL || 3001;
+const port = process.env.PORT || 3001;
 const productsRoutes = require('./routes/products');
 const authRoutes = require('./routes/auth');
 const ordersRoutes = require('./routes/orders');
