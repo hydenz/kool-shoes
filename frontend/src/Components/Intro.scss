@@ -1,0 +1,88 @@
+@import './Config';
+
+.intro {
+  position: relative;
+}
+
+.intro__logo {
+  height: 503px;
+  margin-bottom: 100px;
+}
+
+.intro__text {
+  position: absolute;
+  color: #fff;
+  font-weight: 500;
+  user-select: none;
+}
+
+.intro__title {
+  position: absolute;
+  left: 560px;
+  top: 360px;
+  font-size: 6rem;
+  margin: 0;
+  text-indent: -70px;
+  line-height: 80px;
+}
+
+.intro__slogan {
+  position: absolute;
+  width: max-content;
+  left: 440px;
+  top: 540px;
+  font-size: 1.5rem;
+}
+
+.intro a {
+  position: absolute;
+  width: 180px;
+  height: 100px;
+  left: 590px;
+  top: 600px;
+  background-color: #fff;
+  color: $primary-blue;
+  font-size: 2.7rem;
+}
+
+.intro a:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 1176px) {
+  .intro {
+    @include flex($direction: column, $align: center);
+    margin-top: 55px;
+    height: 100%;
+  }
+
+  .intro__slogan {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .intro__text,
+  .intro__btn,
+  .intro a {
+    position: static;
+  }
+
+  .intro__logo {
+    width: 70vw;
+    height: static;
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+
+  .intro__title {
+    font-size: 14vw;
+    text-indent: initial;
+    margin: 25px 0;
+  }
+
+  .intro__slogan {
+    font-size: 6vw;
+    width: auto;
+    margin-bottom: 25px;
+  }
+}
