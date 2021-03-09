@@ -8,10 +8,6 @@ const ordersRoutes = require('./routes/orders');
 const cartRoutes = require('./routes/cart');
 
 app.use(express.json());
-app.use(productsRoutes);
-app.use(authRoutes);
-app.use(ordersRoutes);
-app.use(cartRoutes);
 
 if (process.env.NODE_ENV === 'development') {
   app.use(
@@ -25,6 +21,10 @@ if (process.env.NODE_ENV === 'development') {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
   });
 }
+app.use(productsRoutes);
+app.use(authRoutes);
+app.use(ordersRoutes);
+app.use(cartRoutes);
 
 app.listen(port, () => {
   console.log(`🚀 Server listening at port ${port}!`);
